@@ -21,6 +21,18 @@
     </script>
 </head>
 <body class="bg-white text-charcoal-grey">
+    <!-- Parallax Backgrounds -->
+    <div class="parallax-bg" id="hero-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2588&q=80');"></div>
+    <div class="parallax-bg" id="audit-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1621905252479-6b9c74a6d2dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2588&q=80');"></div>
+    <div class="parallax-bg" id="gear-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2588&q=80');"></div>
+    <div class="parallax-overlay"></div>
+
+    <!-- Floating Expert Badge -->
+    <div class="expert-badge">
+        <div class="text-sm font-bold">VERIFIED SAFETY EXPERT</div>
+        <div class="text-xs opacity-90">12+ Years Experience</div>
+        <div class="text-xs opacity-90">B.S. Occupational Safety & Health</div>
+    </div>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center bg-no-repeat industrial-texture"
@@ -118,12 +130,15 @@
         </div>
     </section>
 
+    <!-- Chevron Divider -->
+    <div class="chevron-divider"></div>
+
     <!-- 30-Second Home Safety Audit -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <section class="py-16 industrial-ui">
         <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center reveal-on-scroll">
-                <h2 class="text-4xl font-bold text-charcoal-dark mb-4">30-Second Home Safety Audit</h2>
-                <p class="text-xl text-gray-600 mb-8">Answer 3 quick questions to assess your curtain removal risk level</p>
+            <div class="max-w-4xl mx-auto text-center reveal-on-scroll audit-slide-in">
+                <h2 class="text-4xl font-bold text-white mb-4">30-Second Home Safety Audit</h2>
+                <p class="text-xl text-gray-300 mb-8">Answer 3 quick questions to assess your curtain removal risk level <span class="loading-data text-safety-orange font-semibold">Loading Data</span></p>
 
                 <!-- Audit Card -->
                 <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
@@ -297,7 +312,7 @@
     </section>
 
     <!-- No-Ladder DIY Section -->
-    <section class="py-16 diamond-plate">
+    <section class="py-16 industrial-ui">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-charcoal-dark mb-4">Professional Safety Tools</h2>
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Industry-approved equipment that eliminates ladder risks while ensuring proper curtain removal safety protocols.</p>
@@ -463,8 +478,11 @@
         </div>
     </section>
 
+    <!-- Chevron Divider -->
+    <div class="chevron-divider"></div>
+
     <!-- Safety Manager's Field Manual -->
-    <section class="py-16 industrial-mesh">
+    <section class="py-16 industrial-ui">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold text-charcoal-dark mb-4">Safety Manager's Field Manual</h2>
@@ -554,8 +572,11 @@
         </div>
     </section>
 
+    <!-- Chevron Divider -->
+    <div class="chevron-divider"></div>
+
     <!-- Trust Badges -->
-    <section class="py-12 industrial-mesh">
+    <section class="py-12 industrial-ui">
         <div class="container mx-auto px-6">
             <div class="text-center mb-8">
                 <h3 class="text-2xl font-bold text-charcoal-dark mb-4">Certified Safety Standards</h3>
@@ -598,6 +619,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Chevron Divider -->
+    <div class="chevron-divider"></div>
 
     <!-- Expert Bio Section -->
     <section class="py-16 bg-gradient-to-br from-charcoal-grey to-charcoal-dark">
@@ -863,6 +887,168 @@
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
         }
+
+        /* Parallax Backgrounds */
+        .parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -2;
+            opacity: 0;
+            transition: opacity 0.8s ease-out;
+        }
+
+        .parallax-bg.active {
+            opacity: 1;
+        }
+
+        .parallax-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+            z-index: -1;
+        }
+
+        /* Industrial UI - Dark Charcoal with Grid */
+        .industrial-ui {
+            background-color: #1a1a1a;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: relative;
+        }
+
+        .industrial-ui::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 40%, rgba(255, 193, 7, 0.02) 50%, transparent 60%);
+            pointer-events: none;
+        }
+
+        /* Safety Yellow Chevron Dividers */
+        .chevron-divider {
+            position: relative;
+            height: 60px;
+            overflow: hidden;
+            background: #FFD700;
+        }
+
+        .chevron-divider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                #FFD700,
+                #FFD700 20px,
+                #1a1a1a 20px,
+                #1a1a1a 40px
+            );
+            animation: chevron-slide 8s linear infinite;
+        }
+
+        @keyframes chevron-slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Floating Expert Badge */
+        .expert-badge {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #1a1a1a;
+            padding: 12px 16px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            z-index: 1000;
+            font-weight: bold;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            animation: badge-float 3s ease-in-out infinite;
+        }
+
+        .expert-badge::before {
+            content: '✓';
+            margin-right: 8px;
+            color: #1a1a1a;
+            font-size: 16px;
+        }
+
+        @keyframes badge-float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* Safety Audit Slide-in Animation */
+        .audit-slide-in {
+            transform: translateX(-100px);
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .audit-slide-in.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .loading-data {
+            display: inline-block;
+            position: relative;
+        }
+
+        .loading-data::after {
+            content: '';
+            animation: loading-dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes loading-dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
+
+        /* Enhanced Glass Morphism for Dark Theme */
+        .dark-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Override white backgrounds */
+        .industrial-ui .bg-white {
+            background-color: rgba(26, 26, 26, 0.95) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .industrial-ui .text-charcoal-dark {
+            color: #ffffff !important;
+        }
+
+        .industrial-ui .text-gray-600 {
+            color: #cccccc !important;
+        }
+
+        .industrial-ui .text-gray-700 {
+            color: #bbbbbb !important;
+        }
     </style>
 
     <script>
@@ -1087,6 +1273,67 @@
             showQuestion(1);
         }
 
+        // Parallax Scrolling Effect
+        function initParallax() {
+            const heroBg = document.getElementById('hero-bg');
+            const auditBg = document.getElementById('audit-bg');
+            const gearBg = document.getElementById('gear-bg');
+
+            function updateParallax() {
+                const scrollY = window.scrollY;
+                const windowHeight = window.innerHeight;
+
+                // Hero section (top of page)
+                if (scrollY < windowHeight) {
+                    heroBg.classList.add('active');
+                    auditBg.classList.remove('active');
+                    gearBg.classList.remove('active');
+                }
+                // Audit section (middle)
+                else if (scrollY < windowHeight * 2) {
+                    heroBg.classList.remove('active');
+                    auditBg.classList.add('active');
+                    gearBg.classList.remove('active');
+                }
+                // Gear/Expert sections (bottom)
+                else {
+                    heroBg.classList.remove('active');
+                    auditBg.classList.remove('active');
+                    gearBg.classList.add('active');
+                }
+            }
+
+            window.addEventListener('scroll', updateParallax);
+            updateParallax(); // Initialize
+        }
+
+        // Audit Slide-in Animation
+        function initAuditAnimation() {
+            const auditSection = document.querySelector('.audit-slide-in');
+            const loadingText = document.querySelector('.loading-data');
+
+            function checkAuditVisibility() {
+                const rect = auditSection.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight * 0.8 && rect.bottom > 0;
+
+                if (isVisible && !auditSection.classList.contains('active')) {
+                    // Start slide-in animation
+                    setTimeout(() => {
+                        auditSection.classList.add('active');
+                    }, 500);
+
+                    // Change loading text after animation
+                    setTimeout(() => {
+                        loadingText.textContent = 'Data Ready';
+                        loadingText.classList.remove('loading-data');
+                    }, 1500);
+                }
+            }
+
+            window.addEventListener('scroll', checkAuditVisibility);
+            checkAuditVisibility(); // Check initial state
+        }
+
         // Initialize all features
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize scroll reveal animations
@@ -1097,6 +1344,12 @@
 
             // Initialize safety audit
             initSafetyAudit();
+
+            // Initialize parallax backgrounds
+            initParallax();
+
+            // Initialize audit slide-in animation
+            initAuditAnimation();
 
             // Start safety counter animation
             const counterElement = document.getElementById('fall-counter');
