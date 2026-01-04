@@ -67,68 +67,65 @@
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <!-- Mission Briefing -->
-                <div class="text-center text-white mb-12">
-                    <h2 class="text-5xl lg:text-6xl font-bold mb-4">
+                <div class="text-center text-white mb-6">
+                    <h2 class="text-5xl lg:text-6xl font-bold mb-3">
                         <span class="text-safety-orange">Mission:</span> Safe Curtain Removal
                     </h2>
-                    <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+                    <p class="text-lg text-gray-200 max-w-3xl mx-auto mb-4">
                         Choose your path to eliminate fall risks and ensure professional safety standards.
+                    </p>
+                    <p class="text-sm text-gray-300">
+                        <strong>Guided by 12+ Years Safety Leadership</strong> • <strong>B.S. OSH Summa Cum Laude</strong> • <strong>Industrial Hygiene Expert</strong>
                     </p>
                 </div>
 
                 <!-- Command Interface -->
-                <div class="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
                     <!-- ZIP Code Command Center -->
-                    <div class="bg-black bg-opacity-20 backdrop-blur-lg rounded-xl p-8 border border-white border-opacity-20">
+                    <div class="bg-black bg-opacity-20 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20">
                         <div class="text-center">
-                            <div class="w-16 h-16 bg-safety-orange rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-12 h-12 bg-safety-orange rounded-full flex items-center justify-center mx-auto mb-3">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-4">Mission Location</h3>
-                            <form class="space-y-4" id="zip-form">
+                            <h3 class="text-lg font-bold text-white mb-3">Mission Location</h3>
+                            <form class="space-y-3" id="zip-form">
                                 <div>
                                     <input
                                         type="text"
                                         id="zip-input"
                                         placeholder="Enter ZIP Code"
-                                        class="w-full px-4 py-3 bg-white bg-opacity-10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-safety-orange focus:border-safety-orange text-center font-mono text-lg"
+                                        class="w-full px-3 py-2 bg-white bg-opacity-10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-safety-orange focus:border-safety-orange text-center font-mono text-base"
                                         pattern="[0-9]{5}"
                                         maxlength="5"
                                         required
                                     >
                                 </div>
-                                <p class="text-sm text-gray-400">Required for mission deployment</p>
+                                <p class="text-xs text-gray-400">Required for mission deployment</p>
                             </form>
                         </div>
                     </div>
 
                     <!-- Select Your Mission Card -->
-                    <div class="bg-black bg-opacity-20 backdrop-blur-lg rounded-xl p-8 border border-safety-orange border-opacity-50">
+                    <div class="bg-black bg-opacity-20 backdrop-blur-lg rounded-xl p-6 border border-safety-orange border-opacity-50">
                         <div class="text-center">
-                            <div class="w-16 h-16 bg-safety-orange rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Mission Objective: Zero Mishaps</h3>
-                            <p class="text-sm text-gray-300 mb-6">Guided by 12+ years of Safety Leadership and Industrial Hygiene expertise.</p>
+                            <h3 class="text-lg font-bold text-white mb-3">Mission Objective: Zero Mishaps</h3>
 
                             <!-- Mission Path Buttons -->
                             <div class="space-y-3">
                                 <button
                                     id="diy-mission-btn"
-                                    class="w-full bg-safety-orange hover:bg-orange-600 text-white py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                                    class="w-full bg-safety-orange hover:bg-orange-600 text-white py-3 px-4 rounded-lg font-bold text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                                 >
                                     🚀 Guided DIY Strategy
-                                    <div class="text-sm font-normal opacity-90 mt-1">Our DIY strategy focuses on Engineering Controls—using specialized tools to eliminate the need for ladders and mitigate fall risks.</div>
+                                    <div class="text-xs font-normal opacity-90 mt-1">Our DIY strategy focuses on Engineering Controls—using specialized tools to eliminate the need for ladders and mitigate fall risks.</div>
                                 </button>
 
                                 <button
                                     id="pro-mission-btn"
-                                    class="w-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white border-2 border-white border-opacity-50 hover:border-opacity-100 py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105"
+                                    class="w-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white border-2 border-white border-opacity-50 hover:border-opacity-100 py-3 px-4 rounded-lg font-bold text-base transition-all duration-300 transform hover:scale-105"
                                 >
                                     🛡️ Contractor Safety Oversight
                                     <div class="text-sm font-normal opacity-90 mt-1">Our Professional strategy ensures that on-site contractors follow strict safety protocols to protect your home from dust and structural hazards.</div>
@@ -263,7 +260,7 @@
             <div class="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
                 <div class="p-8">
                     <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-2xl font-bold text-charcoal-dark">🚀 Guided DIY Strategy</h3>
+                        <h3 class="text-2xl font-bold text-charcoal-dark">🏗️ Engineering Control: Ground-Level SOP</h3>
                         <button id="close-diy-modal" class="text-gray-400 hover:text-gray-600">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -273,30 +270,58 @@
 
                     <div class="space-y-6">
                         <div class="bg-safety-orange bg-opacity-10 rounded-lg p-4 border-l-4 border-safety-orange">
-                            <h4 class="font-semibold text-charcoal-dark mb-2">Mission Objective</h4>
-                            <p class="text-gray-700">Execute safe curtain removal using professional-grade tools and protocols. Scroll down to access the Professional Safety Tools section.</p>
+                            <h4 class="font-semibold text-charcoal-dark mb-2">Standard Operating Procedure</h4>
+                            <p class="text-gray-700">Execute safe curtain removal using engineering controls that eliminate fall risks through proper tool selection and PPE compliance.</p>
                         </div>
 
                         <div class="bg-gray-50 rounded-lg p-6">
-                            <h4 class="font-semibold text-charcoal-dark mb-4">Pre-Mission Safety Checklist</h4>
-                            <div class="space-y-3">
-                                <div class="flex items-center space-x-3">
-                                    <input type="checkbox" class="w-4 h-4 text-safety-orange rounded">
-                                    <span class="text-sm">Confirm ceiling height is 8 feet or less</span>
+                            <h4 class="font-semibold text-charcoal-dark mb-4">Required Safety Equipment Checklist</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between p-3 bg-white rounded-lg border">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                                            <span class="text-blue-600 font-bold text-sm">👓</span>
+                                        </div>
+                                        <div>
+                                            <div class="font-medium text-charcoal-dark">ANSI Z87.1 Safety Glasses</div>
+                                            <div class="text-sm text-gray-600">Impact-resistant with side shields</div>
+                                        </div>
+                                    </div>
+                                    <input type="checkbox" class="w-5 h-5 text-safety-orange rounded border-2">
                                 </div>
-                                <div class="flex items-center space-x-3">
-                                    <input type="checkbox" class="w-4 h-4 text-safety-orange rounded">
-                                    <span class="text-sm">Ensure you have a spotter available</span>
+
+                                <div class="flex items-center justify-between p-3 bg-white rounded-lg border">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                                            <span class="text-green-600 font-bold text-sm">😷</span>
+                                        </div>
+                                        <div>
+                                            <div class="font-medium text-charcoal-dark">NIOSH N95 Respirator Mask</div>
+                                            <div class="text-sm text-gray-600">95% filtration efficiency for dust protection</div>
+                                        </div>
+                                    </div>
+                                    <input type="checkbox" class="w-5 h-5 text-safety-orange rounded border-2">
                                 </div>
-                                <div class="flex items-center space-x-3">
-                                    <input type="checkbox" class="w-4 h-4 text-safety-orange rounded">
-                                    <span class="text-sm">Verify all tools are OSHA compliant</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <input type="checkbox" class="w-4 h-4 text-safety-orange rounded">
-                                    <span class="text-sm">Check weather conditions (no high winds)</span>
+
+                                <div class="flex items-center justify-between p-3 bg-white rounded-lg border">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                                            <span class="text-purple-600 font-bold text-sm">🔧</span>
+                                        </div>
+                                        <div>
+                                            <div class="font-medium text-charcoal-dark">Telescoping Removal Wand</div>
+                                            <div class="text-sm text-gray-600">6-12 foot reach with safety hooks</div>
+                                        </div>
+                                    </div>
+                                    <input type="checkbox" class="w-5 h-5 text-safety-orange rounded border-2">
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400">
+                            <p class="text-yellow-800 font-medium">
+                                ⚠️ <strong>Engineering Control Principle:</strong> Using the right tools eliminates the need for ladders and dangerous climbing, reducing fall risks by engineering them out of the process.
+                            </p>
                         </div>
 
                         <div class="flex space-x-4">
@@ -329,71 +354,90 @@
 
                     <div class="space-y-6">
                         <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-500">
-                            <h4 class="font-semibold text-charcoal-dark mb-2">Professional Mission Deployment</h4>
-                            <p class="text-gray-700">Connect with certified safety professionals for comprehensive curtain removal oversight and execution.</p>
+                            <h4 class="font-semibold text-charcoal-dark mb-2">Professional Liability & Risk Management</h4>
+                            <p class="text-gray-700">When hiring contractors for curtain removal, professional oversight ensures compliance with safety regulations and protects your property from dust contamination and structural damage.</p>
                         </div>
 
                         <div class="bg-gray-50 rounded-lg p-6">
-                            <h4 class="font-semibold text-charcoal-dark mb-4">Contractor Audit Protocol</h4>
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div class="space-y-3">
-                                    <h5 class="font-medium text-gray-800">Safety Standards Verified:</h5>
-                                    <div class="space-y-2 text-sm">
-                                        <div class="flex items-center space-x-2">
-                                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span>OSHA Compliance Certified</span>
+                            <h4 class="font-semibold text-charcoal-dark mb-4">Dust Mitigation & Containment Protocol</h4>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-4">
+                                    <h5 class="font-medium text-gray-800">Dust Control Measures:</h5>
+                                    <div class="space-y-3 text-sm">
+                                        <div class="flex items-start space-x-3">
+                                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                                <svg class="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </div>
+                                            <span>HEPA filtration systems for airborne particles</span>
                                         </div>
-                                        <div class="flex items-center space-x-2">
-                                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span>Fall Protection Trained</span>
+                                        <div class="flex items-start space-x-3">
+                                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                                <svg class="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </div>
+                                            <span>Plastic sheeting barriers and containment zones</span>
                                         </div>
-                                        <div class="flex items-center space-x-2">
-                                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span>Zero Accident Record</span>
+                                        <div class="flex items-start space-x-3">
+                                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                                <svg class="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </div>
+                                            <span>Negative pressure ventilation systems</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="space-y-3">
-                                    <h5 class="font-medium text-gray-800">Service Coverage:</h5>
-                                    <div class="space-y-2 text-sm">
-                                        <div class="flex items-center space-x-2">
-                                            <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span>All Curtain Types</span>
+                                <div class="space-y-4">
+                                    <h5 class="font-medium text-gray-800">Structural Protection:</h5>
+                                    <div class="space-y-3 text-sm">
+                                        <div class="flex items-start space-x-3">
+                                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                                <svg class="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </div>
+                                            <span>Professional ladder safety and fall arrest systems</span>
                                         </div>
-                                        <div class="flex items-center space-x-2">
-                                            <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span>Any Ceiling Height</span>
+                                        <div class="flex items-start space-x-3">
+                                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                                <svg class="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </div>
+                                            <span>Floor and furniture protection protocols</span>
                                         </div>
-                                        <div class="flex items-center space-x-2">
-                                            <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span>Emergency Response</span>
+                                        <div class="flex items-start space-x-3">
+                                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                                <svg class="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </div>
+                                            <span>Certified contractor insurance verification</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
+                        <div class="bg-red-50 rounded-lg p-4 border-l-4 border-red-400">
+                            <h5 class="font-semibold text-red-800 mb-2">⚠️ Liability Considerations</h5>
+                            <p class="text-red-700 text-sm">
+                                Hiring unlicensed or uninsured contractors can expose you to significant liability risks. Professional oversight ensures all work meets OSHA standards and your property is fully protected.
+                            </p>
+                        </div>
+
                         <div class="bg-safety-orange bg-opacity-10 rounded-lg p-4 border-l-4 border-safety-orange">
                             <p class="text-charcoal-dark font-medium">
-                                <strong>Ready for deployment:</strong> Our certified safety professionals are standing by to ensure your curtain removal project meets the highest safety standards.
+                                <strong>Expert Oversight Available:</strong> Our certified safety professionals provide complete project management, from contractor selection to final inspection, ensuring zero liability exposure and perfect execution.
                             </p>
                         </div>
 
                         <div class="flex space-x-4">
                             <button id="pro-contact-btn" class="flex-1 bg-safety-orange text-white py-3 px-6 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
-                                Deploy Professional Team
+                                Get Professional Oversight
                             </button>
                             <button id="close-pro-confirm" class="bg-gray-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-600 transition-colors">
                                 Close Mission
@@ -1441,6 +1485,8 @@
         function initMissionControl() {
             const diyMissionBtn = document.getElementById('diy-mission-btn');
             const proMissionBtn = document.getElementById('pro-mission-btn');
+            const zipForm = document.getElementById('zip-form');
+            const zipInput = document.getElementById('zip-input');
             const diyModal = document.getElementById('modal-diy');
             const proModal = document.getElementById('modal-pro');
             const closeDiyModal = document.getElementById('close-diy-modal');
@@ -1454,10 +1500,44 @@
                 document.body.style.overflow = 'hidden';
             });
 
-            // Pro Mission Button
+            // Pro Mission Button (kept for alternative access)
             proMissionBtn.addEventListener('click', function() {
                 proModal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
+            });
+
+            // ZIP Code Form Submission - Trigger Pro Modal
+            zipForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const zipCode = zipInput.value.trim();
+
+                // Basic validation
+                if (!zipCode || zipCode.length !== 5 || !/^\d{5}$/.test(zipCode)) {
+                    alert('Please enter a valid 5-digit ZIP code.');
+                    return;
+                }
+
+                // Show loading state
+                const submitBtn = document.querySelector('#zip-form button[type="submit"]');
+                const btnText = submitBtn.querySelector('span');
+                const loadingSpinner = submitBtn.querySelector('.animate-spin');
+
+                submitBtn.disabled = true;
+                btnText.textContent = 'Deploying...';
+                if (loadingSpinner) loadingSpinner.classList.remove('hidden');
+
+                // Simulate processing delay, then show pro modal
+                setTimeout(() => {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    btnText.textContent = 'Get Quote';
+                    if (loadingSpinner) loadingSpinner.classList.add('hidden');
+
+                    // Show pro modal for ZIP-based contractor oversight
+                    proModal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }, 1500);
             });
 
             // Close DIY Modal
