@@ -34,7 +34,7 @@
 
 
     <!-- Safety Command Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-95 backdrop-blur-md border-b-2 border-safety-orange">
+    <header class="absolute top-0 left-0 right-0 z-50 bg-black bg-opacity-95 backdrop-blur-md border-b-2 border-safety-orange">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Command Center Branding -->
@@ -63,19 +63,22 @@
     </header>
 
     <!-- Mission Control Center -->
-    <section class="relative full-screen-section flex items-center overflow-hidden pt-20">
-        <div class="container mx-auto px-6">
+    <section class="relative min-h-screen overflow-hidden flex flex-col justify-start" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/hero-curtains.jpg.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <!-- Header Overlay Space -->
+        <div class="h-20"></div>
+
+        <div class="container mx-auto px-6 flex-grow">
             <div class="max-w-6xl mx-auto">
                 <!-- Mission Briefing -->
-                <div class="text-center text-white mb-6">
+                <div class="text-center text-white">
                     <h2 class="text-5xl lg:text-6xl font-bold mb-3">
                         <span class="text-safety-orange">Mission:</span> Safe Curtain Removal
                     </h2>
-                    <p class="text-lg text-gray-200 max-w-3xl mx-auto mb-4">
+                    <p class="text-lg text-gray-200 max-w-3xl mx-auto mb-6">
                         Achieve a "Zero Mishap" removal through professional-grade risk assessment.
                     </p>
-                    <p class="text-sm text-gray-300">
-                        <strong>Guided by an OSHA 511/521 Certified leader with a Summa Cum Laude B.S. in Occupational Safety & Health.</strong>
+                    <p class="text-sm text-gray-300 font-bold">
+                        Guided by 12+ years of Safety Leadership and Industrial Hygiene expertise.
                     </p>
                 </div>
 
@@ -111,7 +114,8 @@
                     <!-- Select Your Mission Card -->
                     <div class="bg-black bg-opacity-20 backdrop-blur-lg rounded-xl p-6 border border-safety-orange border-opacity-50">
                         <div class="text-center">
-                            <h3 class="text-lg font-bold text-white mb-3">Mission Objective: Zero Mishaps</h3>
+                            <h3 class="text-lg font-bold text-white mb-2">Mission Objective: Zero Mishaps</h3>
+                            <p class="text-sm text-gray-300 mb-6 font-semibold">Guided by an OSHA 511/521 Certified leader with a Summa Cum Laude B.S. in Occupational Safety & Health.</p>
 
                             <!-- Mission Path Buttons -->
                             <div class="space-y-3">
