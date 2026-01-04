@@ -22,7 +22,7 @@
 </head>
 <body class="bg-white text-charcoal-grey">
     <!-- Parallax Backgrounds -->
-    <div class="parallax-bg hero-sticky" id="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2588&q=80');"></div>
+    <div class="parallax-bg hero-sticky" id="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2588&q=80');"></div>
     <div class="parallax-bg" id="audit-bg" style="background-image: url('https://images.unsplash.com/photo-1621905252479-6b9c74a6d2dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2588&q=80');"></div>
     <div class="parallax-bg" id="gear-bg" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2588&q=80');"></div>
     <div class="parallax-overlay"></div>
@@ -30,13 +30,14 @@
     <!-- Official Expert Credential Badge -->
     <div class="expert-badge">
         <div class="credential-title">VERIFIED SAFETY EXPERT</div>
-        <div class="credential-detail">12+ Years Professional Experience</div>
         <div class="credential-detail">B.S. Occupational Safety & Health</div>
+        <div class="credential-detail">(Summa Cum Laude)</div>
+        <div class="credential-detail">OSHA 511/521 Certified</div>
     </div>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center overflow-hidden"
-             style="background-color: #F9FAFB;">
+             style="background-color: #F3F4F6;">
         <div class="absolute inset-0 bg-white bg-opacity-10"></div>
 
         <div class="relative z-10 container mx-auto px-6">
@@ -930,12 +931,12 @@
             z-index: -1;
         }
 
-        /* Bright Technical UI - Light Gray with Subtle White Grid */
+        /* Executive Safety UI - Light Technical Grey with White Grid */
         .industrial-ui {
-            background-color: #F9FAFB;
+            background-color: #F3F4F6;
             background-image:
-                linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+                linear-gradient(rgba(255, 255, 255, 0.6) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.6) 1px, transparent 1px);
             background-size: 40px 40px;
             position: relative;
         }
@@ -947,7 +948,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, transparent 40%, rgba(255, 107, 53, 0.015) 50%, transparent 60%);
+            background: linear-gradient(45deg, transparent 40%, rgba(255, 107, 53, 0.02) 50%, transparent 60%);
             pointer-events: none;
         }
 
@@ -1061,14 +1062,24 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* White Glass Cards with Subtle Shadow */
+        /* Clean White Safety Audit Card */
         .white-glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(229, 231, 235, 0.8);
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(0, 0, 0, 0.03);
+            background: #ffffff;
+            border: 2px solid #f3f4f6;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.04);
             position: relative;
+        }
+
+        .white-glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #FF6B35, #FF8C42);
+            border-radius: 16px 16px 0 0;
         }
 
         /* HUD Card (for ZIP form) */
