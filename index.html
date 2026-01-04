@@ -23,13 +23,13 @@
 <body class="bg-white text-charcoal-grey">
     <!-- Mission-Driven Image Set -->
     <!-- Hero Section Background -->
-    <div class="parallax-bg hero-sticky" id="hero-bg" style="background-image: url('images/hero-curtains.jpg.jpg'); background-attachment: fixed;"></div>
+    <div class="parallax-bg hero-sticky" id="hero-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('images/hero.jpg'); background-attachment: fixed;"></div>
 
     <!-- Safety Audit Background -->
-    <div class="parallax-bg audit-section-bg" id="audit-bg" style="background-image: url('images/renovation-risk.jpg.jpg');"></div>
+    <div class="parallax-bg audit-section-bg" id="audit-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/renovation.jpg');"></div>
 
     <!-- Pro Tools Background -->
-    <div class="parallax-bg pro-tools-bg" id="gear-bg" style="background-image: url('images/safety-gear.jpg.jpg');"></div>
+    <div class="parallax-bg pro-tools-bg" id="gear-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/safety-gear.jpg.jpg');"></div>
     <div class="parallax-overlay"></div>
 
     <!-- Official Expert Credential Badge -->
@@ -41,7 +41,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center overflow-hidden"
+    <section class="relative full-screen-section flex items-center overflow-hidden"
              style="background-color: #F3F4F6;">
         <div class="absolute inset-0 bg-white bg-opacity-10"></div>
 
@@ -136,11 +136,8 @@
         </div>
     </section>
 
-    <!-- Chevron Divider -->
-    <div class="chevron-divider"></div>
-
     <!-- 30-Second Home Safety Audit -->
-    <section class="py-16 industrial-ui audit-section" style="position: relative; z-index: 2;">
+    <section class="full-screen-section industrial-ui audit-section flex items-center" style="position: relative; z-index: 2;">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center fade-slide-up">
                 <h2 class="text-4xl font-bold text-white mb-4">30-Second Home Safety Audit</h2>
@@ -318,7 +315,7 @@
     </section>
 
     <!-- No-Ladder DIY Section -->
-    <section class="py-16 industrial-ui pro-tools-section" style="position: relative; z-index: 2;">
+    <section class="full-screen-section industrial-ui pro-tools-section flex items-center" style="position: relative; z-index: 2;">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-charcoal-dark mb-4">Professional Safety Tools</h2>
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Industry-approved equipment that eliminates ladder risks while ensuring proper curtain removal safety protocols.</p>
@@ -484,9 +481,6 @@
         </div>
     </section>
 
-    <!-- Chevron Divider -->
-    <div class="chevron-divider"></div>
-
     <!-- Safety Manager's Field Manual -->
     <section class="py-16 industrial-ui">
         <div class="container mx-auto px-6">
@@ -578,9 +572,6 @@
         </div>
     </section>
 
-    <!-- Chevron Divider -->
-    <div class="chevron-divider"></div>
-
     <!-- Trust Badges -->
     <section class="py-12 industrial-ui">
         <div class="container mx-auto px-6">
@@ -626,11 +617,8 @@
         </div>
     </section>
 
-    <!-- Chevron Divider -->
-    <div class="chevron-divider"></div>
-
     <!-- Expert Bio Section -->
-    <section class="py-16 bg-gradient-to-br from-charcoal-grey to-charcoal-dark">
+    <section class="full-screen-section bg-gradient-to-br from-charcoal-grey to-charcoal-dark flex items-center">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12 fade-slide-up">
@@ -945,6 +933,22 @@
         /* Pro Tools Background */
         .pro-tools-bg {
             position: relative;
+        }
+
+        /* Full-Screen Seamless Sections */
+        .full-screen-section {
+            min-height: 100vh;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Remove Spacing Between Sections */
+        section + section {
+            margin-top: 0 !important;
+        }
+
+        .chevron-divider {
+            margin: 0 !important;
         }
 
         .parallax-overlay {
