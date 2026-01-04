@@ -21,16 +21,6 @@
     </script>
 </head>
 <body class="bg-white text-charcoal-grey">
-    <!-- Mission-Driven Image Set -->
-    <!-- Hero Section Background -->
-    <div class="parallax-bg hero-sticky" id="hero-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/hero-curtains.jpg.jpg'); background-attachment: fixed;"></div>
-
-    <!-- Safety Audit Background -->
-    <div class="parallax-bg audit-section-bg" id="audit-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/renovation-risk.jpg.jpg');"></div>
-
-    <!-- Pro Tools Background -->
-    <div class="parallax-bg pro-tools-bg" id="gear-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/safety-gear.jpg.jpg');"></div>
-    <div class="parallax-overlay"></div>
 
 
     <!-- Safety Command Header -->
@@ -62,12 +52,16 @@
         </div>
     </header>
 
-    <!-- Mission Control Center -->
-    <section class="relative min-h-screen overflow-hidden flex flex-col justify-start" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/hero-curtains.jpg.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
-        <!-- Header Overlay Space -->
-        <div class="h-20"></div>
+    <!-- Fixed Background Layer -->
+    <div id="background-layer" class="fixed inset-0 z-[-1]">
+        <div id="hero-bg" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/hero-curtains.jpg.jpg');"></div>
+        <div id="audit-bg" class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/renovation-risk.jpg.jpg');"></div>
+        <div id="tools-bg" class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/safety-gear.jpg.jpg');"></div>
+    </div>
 
-        <div class="container mx-auto px-6 flex-grow">
+    <!-- Mission Control Center -->
+    <section class="relative min-h-screen overflow-hidden flex flex-col justify-start">
+        <div class="container mx-auto px-6 flex-grow pt-20">
             <div class="max-w-6xl mx-auto">
                 <!-- Mission Briefing -->
                 <div class="text-center text-white">
@@ -143,7 +137,7 @@
     </section>
 
     <!-- 30-Second Home Safety Audit -->
-    <section class="full-screen-section audit-section flex items-center" style="position: relative; z-index: 2;">
+    <section class="full-screen-section audit-section flex items-center">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center fade-slide-up">
                 <h2 class="text-4xl font-bold text-white mb-4">30-Second Home Safety Audit</h2>
@@ -516,7 +510,7 @@
     </section>
 
     <!-- No-Ladder DIY Section -->
-    <section class="full-screen-section pro-tools-section flex items-center" style="position: relative; z-index: 2;">
+    <section class="full-screen-section pro-tools-section flex items-center">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-charcoal-dark mb-4">Professional Safety Tools</h2>
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Industry-approved equipment that eliminates ladder risks while ensuring proper curtain removal safety protocols.</p>
