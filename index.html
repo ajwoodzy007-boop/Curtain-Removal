@@ -23,10 +23,10 @@
 <body class="bg-white text-charcoal-grey">
     <!-- Mission-Driven Image Set -->
     <!-- Hero Section Background -->
-    <div class="parallax-bg hero-sticky" id="hero-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('images/hero.jpg'); background-attachment: fixed;"></div>
+    <div class="parallax-bg hero-sticky" id="hero-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/hero-curtains.jpg.jpg'); background-attachment: fixed;"></div>
 
     <!-- Safety Audit Background -->
-    <div class="parallax-bg audit-section-bg" id="audit-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/renovation.jpg');"></div>
+    <div class="parallax-bg audit-section-bg" id="audit-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/renovation-risk.jpg.jpg');"></div>
 
     <!-- Pro Tools Background -->
     <div class="parallax-bg pro-tools-bg" id="gear-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/safety-gear.jpg.jpg');"></div>
@@ -40,111 +40,93 @@
         <div class="credential-detail">12+ Years Safety Leadership</div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="relative full-screen-section flex items-center overflow-hidden"
-             style="background-color: #F3F4F6;">
-        <div class="absolute inset-0 bg-white bg-opacity-10"></div>
-
-        <div class="relative z-10 container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-
-                <!-- Left Side: Headline & Safety Impact -->
-                <div class="text-gray-900 reveal-on-scroll">
-                    <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                        Remove Curtains <span class="text-safety-orange">Safely</span>.<br>
-                        <span class="text-4xl lg:text-5xl font-semibold">No Ladder Required.</span>
-                    </h1>
-                    <p class="text-xl mb-8 text-gray-700 max-w-lg">
-                        Professional safety equipment and techniques that eliminate fall risks while ensuring proper curtain and blind removal.
-                    </p>
-
-                    <!-- Safety Impact Counter -->
-                    <div class="bg-white bg-opacity-90 backdrop-blur-md rounded-xl p-6 border border-gray-200 shadow-lg">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="text-2xl font-bold text-safety-orange" id="fall-counter">500,000+</div>
-                                <div class="text-sm text-gray-300">ladder falls occur every year</div>
-                            </div>
-                        </div>
-                        <p class="text-sm text-gray-300">
-                            <strong class="text-white">Stay grounded.</strong> Professional tools eliminate these dangerous risks while ensuring perfect curtain removal.
-                        </p>
+    <!-- Command Center Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 backdrop-blur-md border-b border-safety-orange border-opacity-30">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Website Title -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-safety-orange rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-white">CurtainRemoval.com</h1>
+                        <p class="text-xs text-gray-400">Safety Command Center</p>
                     </div>
                 </div>
 
-                <!-- Right Side: Glass Morphism Form -->
-                <div class="flex justify-center lg:justify-end reveal-on-scroll" style="animation-delay: 0.2s;">
-                    <div class="max-w-md w-full">
-                        <!-- ZIP Code Lead Capture Form -->
-                        <div class="hud-card p-8 floating-card" id="lead-form-container">
-                            <h2 class="text-2xl font-bold text-white mb-2">Connect with Safety Experts</h2>
-                            <p class="text-gray-200 mb-6 text-sm">Enter your ZIP code to find certified professionals in your area.</p>
+                <!-- ZIP Code Form -->
+                <div class="flex items-center space-x-4">
+                    <form class="flex items-center space-x-2" id="zip-form">
+                        <div class="relative">
+                            <input
+                                type="text"
+                                id="zip-input"
+                                placeholder="Enter ZIP Code"
+                                class="w-32 px-3 py-2 bg-white bg-opacity-10 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-safety-orange focus:border-safety-orange text-sm"
+                                pattern="[0-9]{5}"
+                                maxlength="5"
+                                required
+                            >
+                        </div>
+                        <button
+                            type="submit"
+                            id="zip-submit-btn"
+                            class="bg-safety-orange text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition-colors text-sm flex items-center gap-2"
+                        >
+                            <span id="btn-text">Get Quote</span>
+                            <div id="loading-spinner" class="hidden w-3 h-3 border border-white border-t-transparent rounded-full animate-spin"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
 
-                            <form class="space-y-4" id="zip-form">
-                                <div class="relative">
-                                    <input
-                                        type="text"
-                                        id="zip-input"
-                                        placeholder="Enter ZIP Code"
-                                        class="w-full px-4 py-3 bg-white bg-opacity-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-safety-orange focus:border-safety-orange backdrop-blur-sm"
-                                        pattern="[0-9]{5}"
-                                        maxlength="5"
-                                        required
-                                    >
-                                </div>
-                                <button
-                                    type="submit"
-                                    id="zip-submit-btn"
-                                    class="w-full bg-safety-orange text-white py-3 px-6 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
-                                >
-                                    <span id="btn-text">Get Free Quote</span>
-                                    <div id="loading-spinner" class="hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                </button>
-                            </form>
+    <!-- Hero Section -->
+    <section class="relative full-screen-section flex items-center overflow-hidden pt-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h2 class="text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                    Remove Curtains <span class="text-safety-orange">Safely</span>.<br>
+                    <span class="text-4xl lg:text-5xl font-semibold">No Ladder Required.</span>
+                </h2>
+                <p class="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+                    Professional safety equipment and techniques that eliminate fall risks while ensuring proper curtain and blind removal.
+                </p>
 
-                            <div class="mt-6 flex items-center justify-center space-x-2 text-xs text-gray-600">
-                                <span class="flex items-center">
-                                    <svg class="w-4 h-4 text-safety-orange mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    Licensed
-                                </span>
-                                <span>•</span>
-                                <span class="flex items-center">
-                                    <svg class="w-4 h-4 text-safety-orange mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    Bonded
-                                </span>
-                                <span>•</span>
-                                <span class="flex items-center">
-                                    <svg class="w-4 h-4 text-safety-orange mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    Insured
-                                </span>
-                            </div>
+                <!-- Safety Impact Counter -->
+                <div class="bg-black bg-opacity-20 backdrop-blur-md rounded-xl p-6 border border-white border-opacity-20 max-w-md mx-auto">
+                    <div class="flex items-center justify-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-safety-orange" id="fall-counter">500,000+</div>
+                            <div class="text-sm text-gray-300">ladder falls occur every year</div>
                         </div>
                     </div>
+                    <p class="text-sm text-gray-300">
+                        <strong class="text-white">Stay grounded.</strong> Professional tools eliminate these dangerous risks.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 30-Second Home Safety Audit -->
-    <section class="full-screen-section industrial-ui audit-section flex items-center" style="position: relative; z-index: 2;">
+    <section class="full-screen-section audit-section flex items-center" style="position: relative; z-index: 2;">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center fade-slide-up">
                 <h2 class="text-4xl font-bold text-white mb-4">30-Second Home Safety Audit</h2>
                 <p class="text-xl text-gray-300 mb-8">Answer 3 quick questions to assess your curtain removal risk level <span class="loading-data text-safety-orange font-semibold">Loading Data</span></p>
 
                 <!-- Audit Card -->
-                <div class="white-glass-card p-8">
+                <div class="bg-black bg-opacity-20 backdrop-blur-md rounded-xl p-8 border border-white border-opacity-20">
                     <!-- Progress Indicator -->
                     <div class="flex justify-center mb-8">
                         <div class="flex space-x-2">
@@ -315,7 +297,7 @@
     </section>
 
     <!-- No-Ladder DIY Section -->
-    <section class="full-screen-section industrial-ui pro-tools-section flex items-center" style="position: relative; z-index: 2;">
+    <section class="full-screen-section pro-tools-section flex items-center" style="position: relative; z-index: 2;">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-charcoal-dark mb-4">Professional Safety Tools</h2>
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Industry-approved equipment that eliminates ladder risks while ensuring proper curtain removal safety protocols.</p>
@@ -573,7 +555,7 @@
     </section>
 
     <!-- Trust Badges -->
-    <section class="py-12 industrial-ui">
+    <section class="py-12">
         <div class="container mx-auto px-6">
             <div class="text-center mb-8">
                 <h3 class="text-2xl font-bold text-charcoal-dark mb-4">Certified Safety Standards</h3>
@@ -1388,45 +1370,52 @@
             showQuestion(1);
         }
 
-        // Parallax Scrolling Effect with Hero Fade
+        // Parallax Scrolling Effect with Sequential Fading
         function initParallax() {
             const heroBg = document.getElementById('hero-bg');
             const auditBg = document.getElementById('audit-bg');
             const gearBg = document.getElementById('gear-bg');
-            const zipForm = document.getElementById('zip-form');
 
             function updateParallax() {
                 const scrollY = window.scrollY;
                 const windowHeight = window.innerHeight;
 
-                // Hero background fade effect
-                if (zipForm) {
-                    const zipFormRect = zipForm.getBoundingClientRect();
-                    const zipFormTop = zipFormRect.top + scrollY;
-                    const fadeStart = zipFormTop - windowHeight * 0.5;
-                    const fadeEnd = zipFormTop + zipFormRect.height;
+                // Section 1: Hero fades into Section 2: Audit
+                const auditSectionStart = windowHeight * 0.8;
+                const auditSectionEnd = windowHeight * 1.8;
 
-                    if (scrollY > fadeStart) {
-                        const fadeProgress = Math.min((scrollY - fadeStart) / (fadeEnd - fadeStart), 1);
-                        heroBg.style.opacity = Math.max(1 - fadeProgress, 0);
+                if (scrollY < auditSectionStart) {
+                    // Pure hero background
+                    heroBg.style.opacity = 1;
+                    auditBg.style.opacity = 0;
+                    gearBg.style.opacity = 0;
+                } else if (scrollY >= auditSectionStart && scrollY <= auditSectionEnd) {
+                    // Fade hero out, fade audit in
+                    const progress = (scrollY - auditSectionStart) / (auditSectionEnd - auditSectionStart);
+                    heroBg.style.opacity = Math.max(1 - progress, 0);
+                    auditBg.style.opacity = Math.min(progress, 1);
+                    gearBg.style.opacity = 0;
+                } else if (scrollY > auditSectionEnd) {
+                    // Section 2: Audit fades into Section 3: Gear
+                    const gearSectionStart = windowHeight * 1.8;
+                    const gearSectionEnd = windowHeight * 2.8;
+
+                    if (scrollY <= gearSectionStart) {
+                        heroBg.style.opacity = 0;
+                        auditBg.style.opacity = 1;
+                        gearBg.style.opacity = 0;
+                    } else if (scrollY >= gearSectionStart && scrollY <= gearSectionEnd) {
+                        // Fade audit out, fade gear in
+                        const progress = (scrollY - gearSectionStart) / (gearSectionEnd - gearSectionStart);
+                        heroBg.style.opacity = 0;
+                        auditBg.style.opacity = Math.max(1 - progress, 0);
+                        gearBg.style.opacity = Math.min(progress, 1);
                     } else {
-                        heroBg.style.opacity = 1;
+                        // Pure gear background
+                        heroBg.style.opacity = 0;
+                        auditBg.style.opacity = 0;
+                        gearBg.style.opacity = 1;
                     }
-                }
-
-                // Other parallax backgrounds
-                // Audit section (middle)
-                if (scrollY > windowHeight * 0.8 && scrollY < windowHeight * 2) {
-                    auditBg.classList.add('active');
-                } else {
-                    auditBg.classList.remove('active');
-                }
-
-                // Gear/Expert sections (bottom)
-                if (scrollY > windowHeight * 1.8) {
-                    gearBg.classList.add('active');
-                } else {
-                    gearBg.classList.remove('active');
                 }
             }
 
