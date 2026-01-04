@@ -1,1 +1,562 @@
-<h1>Curtain Removal Project</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety-First Curtain Removal Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'safety-orange': '#FF6B35',
+                        'charcoal-grey': '#374151',
+                        'charcoal-dark': '#1F2937',
+                        'safety-yellow': '#FFD700'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-charcoal-grey">
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-charcoal-grey to-charcoal-dark text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-6">Remove Curtains Safely. No Ladder Required.</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Professional safety equipment and techniques that eliminate fall risks while ensuring proper curtain and blind removal.</p>
+
+            <!-- ZIP Code Lead Capture Form -->
+            <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-6" id="lead-form-container">
+                <h2 class="text-2xl font-semibold text-charcoal-dark mb-4">Connect with Safety Experts</h2>
+                <p class="text-gray-600 mb-4">Enter your ZIP code to find certified professionals in your area.</p>
+                <form class="flex gap-2" id="zip-form">
+                    <input
+                        type="text"
+                        id="zip-input"
+                        placeholder="Enter ZIP Code"
+                        class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-safety-orange"
+                        pattern="[0-9]{5}"
+                        maxlength="5"
+                        required
+                    >
+                    <button
+                        type="submit"
+                        id="zip-submit-btn"
+                        class="bg-safety-orange text-white px-6 py-2 rounded-md hover:bg-orange-600 transition-colors font-semibold flex items-center gap-2"
+                    >
+                        <span id="btn-text">Get Quote</span>
+                        <div id="loading-spinner" class="hidden w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    </button>
+                </form>
+                <p class="text-xs text-gray-500 mt-2">Licensed • Bonded • Insured • Fall Protection Certified</p>
+            </div>
+
+            <!-- Contact Details Modal -->
+            <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+                <div class="flex items-center justify-center min-h-screen p-4">
+                    <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-semibold text-charcoal-dark">Complete Your Quote Request</h3>
+                            <button id="close-modal" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="modal-content">
+                            <p class="text-gray-600 mb-4">Found certified safety professionals near <span id="modal-zip" class="font-semibold text-safety-orange"></span>!</p>
+                            <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                                <input type="hidden" name="zip_code" id="hidden-zip">
+                                <div class="mb-4">
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-safety-orange"
+                                        placeholder="your.email@example.com"
+                                    >
+                                </div>
+                                <div class="mb-6">
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-safety-orange"
+                                        placeholder="(555) 123-4567"
+                                    >
+                                </div>
+                                <button
+                                    type="submit"
+                                    id="contact-submit-btn"
+                                    class="w-full bg-safety-orange text-white py-2 px-4 rounded-md hover:bg-orange-600 transition-colors font-semibold flex items-center justify-center gap-2"
+                                >
+                                    <span id="contact-btn-text">Get My Free Quote</span>
+                                    <div id="contact-loading-spinner" class="hidden w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                </button>
+                            </form>
+                        </div>
+                        <div id="success-message" class="hidden text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-green-800 mb-2">Quote Request Sent!</h3>
+                            <p class="text-gray-600">A certified safety professional will contact you within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- No-Ladder DIY Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-charcoal-dark mb-4">Professional Safety Tools</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Industry-approved equipment that eliminates ladder risks while ensuring proper curtain removal safety protocols.</p>
+
+            <!-- Featured Product: Drape & Curtain Rod Remover Wand -->
+            <div class="max-w-6xl mx-auto mb-16">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <!-- Product Image Placeholder -->
+                        <div class="md:w-1/3 bg-gradient-to-br from-safety-orange to-orange-600 p-8 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V8a5.002 5.002 0 003.998-4.9V6a1 1 0 01-2 0V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div class="text-sm font-semibold">Telescoping Wand</div>
+                            </div>
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="md:w-2/3 p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-safety-orange text-white px-3 py-1 rounded-full text-sm font-semibold">FEATURED PRODUCT</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-charcoal-dark mb-3">Drape & Curtain Rod Remover Wand</h3>
+                            <p class="text-gray-600 mb-6 text-lg">The industry's most advanced telescoping safety tool for curtain removal. Engineered to eliminate fall risks while providing professional-grade precision and control.</p>
+
+                            <!-- Key Features -->
+                            <div class="grid md:grid-cols-2 gap-4 mb-6">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 bg-safety-orange rounded-full flex items-center justify-center mt-1">
+                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-charcoal-dark">Telescoping Design</div>
+                                        <div class="text-sm text-gray-600">6-12 foot extension for high ceilings</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 bg-safety-orange rounded-full flex items-center justify-center mt-1">
+                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-charcoal-dark">Safety Hook System</div>
+                                        <div class="text-sm text-gray-600">Secure grip with anti-slip mechanism</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 bg-safety-orange rounded-full flex items-center justify-center mt-1">
+                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-charcoal-dark">Universal Compatibility</div>
+                                        <div class="text-sm text-gray-600">Works with all standard curtain hardware</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 bg-safety-orange rounded-full flex items-center justify-center mt-1">
+                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-charcoal-dark">OSHA Compliant</div>
+                                        <div class="text-sm text-gray-600">Meets fall protection standards</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CTA Buttons -->
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#" class="bg-safety-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors text-center">
+                                    View on Amazon
+                                </a>
+                                <a href="#" class="border-2 border-safety-orange text-safety-orange px-6 py-3 rounded-lg font-semibold hover:bg-safety-orange hover:text-white transition-colors text-center">
+                                    Check Safety Specs
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Protection Equipment -->
+            <div class="max-w-6xl mx-auto">
+                <h3 class="text-2xl font-bold text-center text-charcoal-dark mb-8">Personal Protection Equipment</h3>
+                <p class="text-center text-gray-600 mb-12">Essential safety gear that meets OSHA standards and protects against dust exposure and eye hazards during curtain removal.</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+
+                    <!-- Anti-Fog Safety Glasses -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-safety-orange">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-safety-orange bg-opacity-10 rounded-lg flex items-center justify-center">
+                                <svg class="w-8 h-8 text-safety-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-semibold text-charcoal-dark mb-2">Anti-Fog Safety Glasses</h4>
+                                <p class="text-gray-600 mb-4">Crystal-clear vision protection with advanced anti-fog coating. Meets ANSI Z87.1 standards for impact resistance.</p>
+                                <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                                    <li>• Anti-fog coating for 24+ hours of clear vision</li>
+                                    <li>• UV400 protection blocks 100% of harmful rays</li>
+                                    <li>• Polycarbonate lenses for superior impact resistance</li>
+                                    <li>• Adjustable temples and nose bridge</li>
+                                    <li>• OSHA-compliant for dust and debris protection</li>
+                                </ul>
+                                <a href="#" class="inline-block bg-safety-orange text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition-colors">
+                                    View on Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- N95 Dust Masks -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-safety-orange">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-safety-orange bg-opacity-10 rounded-lg flex items-center justify-center">
+                                <svg class="w-8 h-8 text-safety-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-semibold text-charcoal-dark mb-2">N95 Dust Masks</h4>
+                                <p class="text-gray-600 mb-4">NIOSH-approved respiratory protection that filters 95% of airborne particles. Essential for curtain removal dust control.</p>
+                                <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                                    <li>• NIOSH N95 certification for 95% filtration efficiency</li>
+                                    <li>• Dual elastic straps for secure, comfortable fit</li>
+                                    <li>• Moldable nose bridge prevents fogging</li>
+                                    <li>• Fluid-resistant outer layer</li>
+                                    <li>• Meets CDC guidelines for respiratory protection</li>
+                                </ul>
+                                <a href="#" class="inline-block bg-safety-orange text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition-colors">
+                                    View on Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safety Compliance Note -->
+                <div class="mt-12 bg-white rounded-lg shadow-md p-6 text-center border border-safety-orange border-opacity-20">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-12 h-12 bg-safety-orange rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-semibold text-charcoal-dark mb-2">OSHA Safety Compliance</h4>
+                    <p class="text-gray-600">All recommended products meet or exceed Occupational Safety and Health Administration standards for fall protection, respiratory safety, and personal protective equipment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Manager's Assessment -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-charcoal-dark mb-12">Safety Manager's Assessment</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Critical safety data that every renovation project must address. Professional oversight prevents accidents and ensures compliance.</p>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+
+                    <!-- Ladder Falls - #1 Home Injury -->
+                    <div class="bg-red-50 border-l-4 border-red-400 p-6">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-red-500 text-white w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-red-800">Ladder Falls</h3>
+                                <p class="text-red-600 font-semibold">#1 Cause of Home Injuries</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4 text-gray-700">
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-gray-800 mb-2">Annual Statistics</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• <strong>500,000+</strong> emergency room visits yearly</li>
+                                    <li>• <strong>$15 billion</strong> in medical costs annually</li>
+                                    <li>• Average hospital stay: <strong>6 days</strong></li>
+                                    <li>• <strong>300+</strong> deaths from ladder falls yearly</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-gray-800 mb-2">Common Causes</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Improper ladder setup</li>
+                                    <li>• Overreaching while on ladder</li>
+                                    <li>• Slippery surfaces</li>
+                                    <li>• Lack of fall protection</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dust Exposure Risks -->
+                    <div class="bg-orange-50 border-l-4 border-orange-400 p-6">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-orange-500 text-white w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-orange-800">Dust Exposure</h3>
+                                <p class="text-orange-600 font-semibold">Respiratory & Health Hazards</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4 text-gray-700">
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-gray-800 mb-2">Health Impacts</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• <strong>Silicosis</strong> and lung damage</li>
+                                    <li>• <strong>Allergic reactions</strong> and asthma</li>
+                                    <li>• <strong>Skin irritation</strong> and dermatitis</li>
+                                    <li>• Long-term <strong>carcinogenic risks</strong></li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-gray-800 mb-2">OSHA Standards</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• PEL: <strong>15 mg/m³</strong> total dust</li>
+                                    <li>• PEL: <strong>5 mg/m³</strong> respirable dust</li>
+                                    <li>• Requires respiratory protection</li>
+                                    <li>• Engineering controls mandatory</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Recommendation -->
+                <div class="mt-12 bg-safety-orange text-white p-8 rounded-lg text-center">
+                    <h3 class="text-2xl font-bold mb-4">Professional Safety Recommendation</h3>
+                    <p class="text-lg mb-6">Given the extreme risks of ladder falls and dust exposure, we strongly recommend professional curtain removal services. Our certified teams eliminate these hazards while ensuring proper disposal and cleanup.</p>
+                    <div class="flex justify-center space-x-4 text-sm">
+                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded">OSHA Compliant</span>
+                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded">Fall Protection Certified</span>
+                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded">Respiratory Safety Trained</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-charcoal-dark mb-4">Certified Safety Standards</h3>
+                <p class="text-gray-600">Our professionals meet the highest safety and compliance standards</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
+                <!-- Fall Protection Certified -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center min-w-[200px]">
+                    <div class="bg-safety-orange text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-charcoal-dark mb-2">Fall Protection Certified</h4>
+                    <p class="text-sm text-gray-600">Advanced fall prevention training and equipment certified by safety professionals</p>
+                </div>
+
+                <!-- OSHA Standard Compliant -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center min-w-[200px]">
+                    <div class="bg-safety-orange text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-charcoal-dark mb-2">OSHA Standard Compliant</h4>
+                    <p class="text-sm text-gray-600">Meets all Occupational Safety and Health Administration standards and regulations</p>
+                </div>
+
+                <!-- Verified Professionals -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center min-w-[200px]">
+                    <div class="bg-safety-orange text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-charcoal-dark mb-2">Verified Professionals</h4>
+                    <p class="text-sm text-gray-600">Background checked, trained, and verified specialists with proven safety records</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal-dark text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2024 Safety-First Curtain Removal Services. All rights reserved.</p>
+            <p class="text-sm text-gray-500 mt-2">OSHA Compliant • Licensed & Insured • Professional Safety Standards</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form handling functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const zipForm = document.getElementById('zip-form');
+            const zipInput = document.getElementById('zip-input');
+            const submitBtn = document.getElementById('zip-submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const formContainer = document.getElementById('lead-form-container');
+
+            const contactModal = document.getElementById('contact-modal');
+            const closeModalBtn = document.getElementById('close-modal');
+            const contactForm = document.getElementById('contact-form');
+            const modalZip = document.getElementById('modal-zip');
+            const hiddenZip = document.getElementById('hidden-zip');
+            const contactSubmitBtn = document.getElementById('contact-submit-btn');
+            const contactBtnText = document.getElementById('contact-btn-text');
+            const contactLoadingSpinner = document.getElementById('contact-loading-spinner');
+            const modalContent = document.getElementById('modal-content');
+            const successMessage = document.getElementById('success-message');
+
+            // ZIP Code Form Submission
+            zipForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const zipCode = zipInput.value.trim();
+
+                // Basic validation
+                if (!zipCode || zipCode.length !== 5 || !/^\d{5}$/.test(zipCode)) {
+                    alert('Please enter a valid 5-digit ZIP code.');
+                    return;
+                }
+
+                // Show loading state
+                submitBtn.disabled = true;
+                btnText.textContent = 'Searching...';
+                loadingSpinner.classList.remove('hidden');
+
+                // Simulate API call delay
+                setTimeout(() => {
+                    // Replace form with success message
+                    formContainer.innerHTML = `
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-2xl font-semibold text-charcoal-dark mb-2">Success!</h2>
+                            <p class="text-gray-600 mb-4">Searching for certified safety pros in <span class="font-semibold text-safety-orange">${zipCode}</span>...</p>
+                            <button
+                                id="continue-btn"
+                                class="bg-safety-orange text-white px-6 py-2 rounded-md hover:bg-orange-600 transition-colors font-semibold"
+                            >
+                                Continue to Quote Request
+                            </button>
+                        </div>
+                    `;
+
+                    // Add event listener to continue button
+                    document.getElementById('continue-btn').addEventListener('click', function() {
+                        openContactModal(zipCode);
+                    });
+                }, 2000);
+            });
+
+            // Contact Modal Functions
+            function openContactModal(zipCode) {
+                modalZip.textContent = zipCode;
+                hiddenZip.value = zipCode;
+                contactModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeContactModal() {
+                contactModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+                resetContactForm();
+            }
+
+            function resetContactForm() {
+                contactForm.reset();
+                modalContent.classList.remove('hidden');
+                successMessage.classList.add('hidden');
+                contactSubmitBtn.disabled = false;
+                contactBtnText.textContent = 'Get My Free Quote';
+                contactLoadingSpinner.classList.add('hidden');
+            }
+
+            // Close modal events
+            closeModalBtn.addEventListener('click', closeContactModal);
+            contactModal.addEventListener('click', function(e) {
+                if (e.target === contactModal) {
+                    closeContactModal();
+                }
+            });
+
+            // Contact Form Submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Show loading state
+                contactSubmitBtn.disabled = true;
+                contactBtnText.textContent = 'Sending...';
+                contactLoadingSpinner.classList.remove('hidden');
+
+                // Simulate form submission delay
+                setTimeout(() => {
+                    // Show success message
+                    modalContent.classList.add('hidden');
+                    successMessage.classList.remove('hidden');
+
+                    // Auto-close modal after 3 seconds
+                    setTimeout(() => {
+                        closeContactModal();
+                    }, 3000);
+                }, 2000);
+            });
+
+            // Close modal on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !contactModal.classList.contains('hidden')) {
+                    closeContactModal();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
