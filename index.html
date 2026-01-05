@@ -52,9 +52,22 @@
         </div>
     </header>
 
+    <!-- Fixed Background Layer -->
+    <div id="background-layer" class="fixed inset-0 z-[-1]">
+        <!-- Section 1: Hero -->
+        <div id="hero-bg" class="absolute inset-0 transition-opacity duration-1000" style="background-image: url('images/hero-curtains.jpg.jpg'); background-size: cover; background-position: center;"></div>
+        <!-- Section 2: Audit -->
+        <div id="audit-bg" class="absolute inset-0 opacity-0 transition-opacity duration-1000" style="background-image: url('images/renovation-risk.jpg.jpg'); background-size: cover; background-position: center;"></div>
+        <!-- Section 3: Lead Hazard -->
+        <div id="lead-bg" class="absolute inset-0 opacity-0 transition-opacity duration-1000" style="background-image: url('images/lead-test.jpg.jpg'); background-size: cover; background-position: center;"></div>
+        <!-- Section 4: Pro Route -->
+        <div id="pro-bg" class="absolute inset-0 opacity-0 transition-opacity duration-1000" style="background-image: url('images/scaffolding.jpg.jpg'); background-size: cover; background-position: center;"></div>
+        <!-- Section 5: Expert/Tools -->
+        <div id="expert-bg" class="absolute inset-0 opacity-0 transition-opacity duration-1000" style="background-image: url('images/safety-gear.jpg.jpg'); background-size: cover; background-position: center;"></div>
+    </div>
 
     <!-- Mission Control Center -->
-    <section id="hero" class="relative min-h-screen overflow-hidden flex flex-col justify-start border-b-4 border-safety-orange border-opacity-30 z-10" style="scroll-snap-align: start; height: 100vh; background-image: url('images/hero-curtains.jpg.jpg'); background-attachment: fixed; background-size: cover; background-position: center;">
+    <section id="hero" class="relative min-h-screen overflow-hidden flex flex-col justify-start border-b-4 border-safety-orange border-opacity-30 z-10" style="scroll-snap-align: start; height: 100vh;">
         <div class="container mx-auto px-6 flex-grow" style="padding-top: 80px;">
             <div class="max-w-6xl mx-auto">
                 <!-- Mission Briefing -->
@@ -127,7 +140,7 @@
     </section>
 
     <!-- 30-Second Home Safety Audit -->
-    <section id="audit" class="full-screen-section audit-section flex items-center border-b-4 border-safety-orange border-opacity-30 mt-4 z-10" style="scroll-snap-align: start; height: 100vh; background-image: url('images/renovation-risk.jpg.jpg'); background-attachment: fixed; background-size: cover; background-position: center;">
+    <section id="audit" class="full-screen-section audit-section flex items-center border-b-4 border-safety-orange border-opacity-30 mt-4 z-10" style="scroll-snap-align: start; height: 100vh;">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center fade-slide-up">
                 <h2 class="text-4xl font-bold text-white mb-4">Site Inspection: Risk Assessment Protocol</h2>
@@ -213,7 +226,7 @@
     </section>
 
     <!-- Hidden Hazards Section -->
-    <section id="lead-hazard" class="full-screen-section hazards-section flex items-center border-b-4 border-safety-orange border-opacity-30 mt-4 relative z-10" style="scroll-snap-align: start; height: 100vh; background-image: url('images/lead-test.jpg.jpg'); background-attachment: fixed; background-size: cover; background-position: center;">
+    <section id="lead-hazard" class="full-screen-section hazards-section flex items-center border-b-4 border-safety-orange border-opacity-30 mt-4 relative z-10" style="scroll-snap-align: start; height: 100vh;">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center fade-slide-up">
                 <h2 class="text-4xl font-bold text-white mb-6">SOP: Industrial Hygiene - Lead Hazard Assessment</h2>
@@ -238,7 +251,7 @@
                                 <li>• EPA Lead-Safe Certified practices</li>
                                 <li>• Containment and disposal procedures</li>
                             </ul>
-                            <a href="https://www.amazon.com/Lead-Test-Kit-EPA-Recognized/dp/B08L8C2J9X" target="_blank" class="inline-block bg-red-600 text-white px-3 py-1 rounded text-xs font-semibold hover:bg-red-700 transition-colors">Get EPA Lead Test Kit</a>
+                            <a href="https://www.amazon.com/Lead-Test-Kit-EPA-Recognized/dp/B08L8C2J9X?tag=youraffiliateid" target="_blank" class="inline-block bg-red-600 text-white px-3 py-1 rounded text-xs font-semibold hover:bg-red-700 transition-colors">Get EPA Lead Test Kit</a>
                         </div>
 
                         <!-- Respiratory Protection -->
@@ -323,7 +336,7 @@
                                         <div>
                                             <div class="font-medium text-charcoal-dark">Drape & Curtain Rod Remover & Replacer</div>
                                             <div class="text-sm text-gray-600">Engineering Control: The primary tool to eliminate ladder-fall hazards identified in your safety audit.</div>
-                                            <a href="#" class="inline-block mt-2 bg-safety-orange text-white px-3 py-1 rounded text-xs font-semibold hover:bg-orange-600 transition-colors">Check Compliance & Pricing</a>
+                                            <a href="https://www.amazon.com/3M-N95-Respirator-Masks/dp/B08L8C2J8X?tag=youraffiliateid?tag=youraffiliateid" target="_blank" class="inline-block mt-2 bg-safety-orange text-white px-3 py-1 rounded text-xs font-semibold hover:bg-orange-600 transition-colors">Check Compliance & Pricing</a>
                                         </div>
                                     </div>
                                     <input type="checkbox" class="w-5 h-5 text-safety-orange rounded border-2">
@@ -337,7 +350,7 @@
                                         <div>
                                             <div class="font-medium text-charcoal-dark">3M N95 Respirator Masks</div>
                                             <div class="text-sm text-gray-600">Respiratory SOP: Essential for any project involving potential lead dust or high-particulate environments.</div>
-                                            <a href="#" class="inline-block mt-2 bg-safety-orange text-white px-3 py-1 rounded text-xs font-semibold hover:bg-orange-600 transition-colors">Check Compliance & Pricing</a>
+                                            <a href="https://www.amazon.com/3M-N95-Respirator-Masks/dp/B08L8C2J8X?tag=youraffiliateid?tag=youraffiliateid" target="_blank" class="inline-block mt-2 bg-safety-orange text-white px-3 py-1 rounded text-xs font-semibold hover:bg-orange-600 transition-colors">Check Compliance & Pricing</a>
                                         </div>
                                     </div>
                                     <input type="checkbox" class="w-5 h-5 text-safety-orange rounded border-2">
@@ -351,7 +364,7 @@
                                         <div>
                                             <div class="font-medium text-charcoal-dark">3M Anti-Fog Safety Glasses</div>
                                             <div class="text-sm text-gray-600">Ocular Defense: ANSI Z87.1 rated to protect eyes from falling hardware and renovation debris.</div>
-                                            <a href="#" class="inline-block mt-2 bg-safety-orange text-white px-3 py-1 rounded text-xs font-semibold hover:bg-orange-600 transition-colors">Check Compliance & Pricing</a>
+                                            <a href="https://www.amazon.com/3M-N95-Respirator-Masks/dp/B08L8C2J8X?tag=youraffiliateid?tag=youraffiliateid" target="_blank" class="inline-block mt-2 bg-safety-orange text-white px-3 py-1 rounded text-xs font-semibold hover:bg-orange-600 transition-colors">Check Compliance & Pricing</a>
                                         </div>
                                     </div>
                                     <input type="checkbox" class="w-5 h-5 text-safety-orange rounded border-2">
@@ -466,9 +479,9 @@
                         <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-400">
                             <h5 class="font-semibold text-green-800 mb-2">🛡️ Mandatory Ocular Defense</h5>
                             <p class="text-green-700 text-sm mb-3">
-                                All contractors must provide <a href="https://www.amazon.com/3M-Anti-Fog-Safety-Glasses/dp/B08L8C2J8Y" target="_blank" class="text-green-600 hover:text-green-800 underline font-semibold">3M Anti-Fog Safety Glasses (ANSI Z87.1)</a> for overhead work protection.
+                                All contractors must provide <a href="https://www.amazon.com/3M-Anti-Fog-Safety-Glasses/dp/B08L8C2J8Y?tag=youraffiliateid" target="_blank" class="text-green-600 hover:text-green-800 underline font-semibold">3M Anti-Fog Safety Glasses (ANSI Z87.1)</a> for overhead work protection.
                             </p>
-                            <a href="https://www.amazon.com/3M-Anti-Fog-Safety-Glasses/dp/B08L8C2J8Y" target="_blank" class="inline-block bg-green-600 text-white px-4 py-2 rounded text-sm font-semibold hover:bg-green-700 transition-colors">Verify Contractor PPE</a>
+                            <a href="https://www.amazon.com/3M-Anti-Fog-Safety-Glasses/dp/B08L8C2J8Y?tag=youraffiliateid" target="_blank" class="inline-block bg-green-600 text-white px-4 py-2 rounded text-sm font-semibold hover:bg-green-700 transition-colors">Verify Contractor PPE</a>
                         </div>
 
                         <div class="bg-red-50 rounded-lg p-4 border-l-4 border-red-400">
@@ -561,7 +574,7 @@
     </section>
 
     <!-- Tools & Expert Section -->
-    <section id="tools-expert" class="full-screen-section pro-tools-section flex items-center mt-4 z-10" style="scroll-snap-align: start; height: 100vh; background-image: url('images/safety-gear.jpg.jpg'); background-attachment: fixed; background-size: cover; background-position: center;">
+    <section id="tools-expert" class="full-screen-section pro-tools-section flex items-center mt-4 z-10" style="scroll-snap-align: start; height: 100vh;">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-charcoal-dark mb-4">Safety Manager's Field Manual: Required PPE & Equipment</h2>
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Standard-issue safety equipment for professional curtain removal operations. All items meet OSHA/NIOSH compliance standards.</p>
@@ -593,7 +606,7 @@
                                     <li>• Adjustable temples and nose bridge</li>
                                     <li>• OSHA-compliant for dust and debris protection</li>
                                 </ul>
-                                <a href="#" class="inline-block bg-safety-orange text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition-colors">
+                                <a href="https://www.amazon.com/Drape-Curtain-Rod-Remover-Replacer/dp/B08L8C2J8Z?tag=youraffiliateid" target="_blank" class="inline-block bg-safety-orange text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition-colors">
                                     Check Compliance & Pricing
                                 </a>
                             </div>
@@ -618,7 +631,7 @@
                                     <li>• Fluid-resistant outer layer</li>
                                     <li>• Meets CDC guidelines for respiratory protection</li>
                                 </ul>
-                                <a href="#" class="inline-block bg-safety-orange text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition-colors">
+                                <a href="https://www.amazon.com/Drape-Curtain-Rod-Remover-Replacer/dp/B08L8C2J8Z?tag=youraffiliateid" target="_blank" class="inline-block bg-safety-orange text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition-colors">
                                     Check Compliance & Pricing
                                 </a>
                             </div>
@@ -636,9 +649,9 @@
                     </h4>
                     <div class="grid md:grid-cols-3 gap-4 text-sm">
                         <div class="bg-white bg-opacity-10 rounded p-3">
-                            <div class="font-semibold text-white mb-1"><a href="https://www.amazon.com/3M-N95-Respirator-Masks/dp/B08L8C2J8X" target="_blank" class="text-white hover:text-safety-orange transition-colors">Respiratory SOP</a></div>
-                            <div class="text-gray-300 mb-2"><a href="https://www.amazon.com/3M-N95-Respirator-Masks/dp/B08L8C2J8X" target="_blank" class="text-gray-300 hover:text-safety-orange transition-colors">3M N95 Respirator Masks — Essential for any project involving potential lead dust or high-particulate environments.</a></div>
-                            <a href="https://www.amazon.com/3M-N95-Respirator-Masks/dp/B08L8C2J8X" target="_blank" class="inline-block bg-safety-orange text-white px-3 py-1 rounded text-xs font-semibold hover:bg-orange-600 transition-colors">Verify Lead-Safe Gear</a>
+                            <div class="font-semibold text-white mb-1"><a href="https://www.amazon.com/3M-N95-Respirator-Masks/dp/B08L8C2J8X?tag=youraffiliateid" target="_blank" class="text-white hover:text-safety-orange transition-colors">Respiratory SOP</a></div>
+                            <div class="text-gray-300 mb-2"><a href="https://www.amazon.com/3M-N95-Respirator-Masks/dp/B08L8C2J8X?tag=youraffiliateid" target="_blank" class="text-gray-300 hover:text-safety-orange transition-colors">3M N95 Respirator Masks — Essential for any project involving potential lead dust or high-particulate environments.</a></div>
+                            <a href="https://www.amazon.com/3M-N95-Respirator-Masks/dp/B08L8C2J8X?tag=youraffiliateid" target="_blank" class="inline-block bg-safety-orange text-white px-3 py-1 rounded text-xs font-semibold hover:bg-orange-600 transition-colors">Verify Lead-Safe Gear</a>
                         </div>
                         <div class="bg-white bg-opacity-10 rounded p-3">
                             <div class="font-semibold text-white mb-1">Ocular Defense</div>
@@ -805,7 +818,7 @@
 
 
     <!-- Professional Route Section -->
-    <section id="pro-route" class="full-screen-section pro-route-section flex items-center border-b-4 border-safety-orange border-opacity-30 mt-4 z-10" style="scroll-snap-align: start; height: 100vh; background-image: url('images/scaffolding.jpg.jpg'); background-attachment: fixed; background-size: cover; background-position: center;">
+    <section id="pro-route" class="full-screen-section pro-route-section flex items-center border-b-4 border-safety-orange border-opacity-30 mt-4 z-10" style="scroll-snap-align: start; height: 100vh;">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center fade-slide-up">
                 <h2 class="text-4xl font-bold text-white mb-6">SOP: Contractor Safety Oversight Protocol</h2>
@@ -1540,13 +1553,15 @@
             const proContactBtn = document.getElementById('pro-contact-btn');
 
             // DIY Mission Button
-            diyMissionBtn.addEventListener('click', function() {
+            diyMissionBtn.addEventListener('click', function(e) {
+                e.preventDefault();
                 diyModal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             });
 
             // Pro Mission Button (kept for alternative access)
-            proMissionBtn.addEventListener('click', function() {
+            proMissionBtn.addEventListener('click', function(e) {
+                e.preventDefault();
                 proModal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             });
@@ -1914,6 +1929,65 @@
                     closeContactModal();
                 }
             });
+
+            // Background scroll opacity control
+            const heroBg = document.getElementById('hero-bg');
+            const auditBg = document.getElementById('audit-bg');
+            const leadBg = document.getElementById('lead-bg');
+            const proBg = document.getElementById('pro-bg');
+            const expertBg = document.getElementById('expert-bg');
+
+            function updateBackgroundOpacity() {
+                const scrollY = window.scrollY;
+                const windowHeight = window.innerHeight;
+
+                // Section 1: Hero (0 to 1vh)
+                if (scrollY < windowHeight) {
+                    heroBg.style.opacity = '1';
+                    auditBg.style.opacity = '0';
+                    leadBg.style.opacity = '0';
+                    proBg.style.opacity = '0';
+                    expertBg.style.opacity = '0';
+                }
+                // Section 2: Audit (1vh to 2vh)
+                else if (scrollY >= windowHeight && scrollY < windowHeight * 2) {
+                    heroBg.style.opacity = '0';
+                    auditBg.style.opacity = '1';
+                    leadBg.style.opacity = '0';
+                    proBg.style.opacity = '0';
+                    expertBg.style.opacity = '0';
+                }
+                // Section 3: Lead Hazard (2vh to 3vh)
+                else if (scrollY >= windowHeight * 2 && scrollY < windowHeight * 3) {
+                    heroBg.style.opacity = '0';
+                    auditBg.style.opacity = '0';
+                    leadBg.style.opacity = '1';
+                    proBg.style.opacity = '0';
+                    expertBg.style.opacity = '0';
+                }
+                // Section 4: Pro Route (3vh to 4vh)
+                else if (scrollY >= windowHeight * 3 && scrollY < windowHeight * 4) {
+                    heroBg.style.opacity = '0';
+                    auditBg.style.opacity = '0';
+                    leadBg.style.opacity = '0';
+                    proBg.style.opacity = '1';
+                    expertBg.style.opacity = '0';
+                }
+                // Section 5: Expert/Tools (4vh and beyond)
+                else if (scrollY >= windowHeight * 4) {
+                    heroBg.style.opacity = '0';
+                    auditBg.style.opacity = '0';
+                    leadBg.style.opacity = '0';
+                    proBg.style.opacity = '0';
+                    expertBg.style.opacity = '1';
+                }
+            }
+
+            // Initial call
+            updateBackgroundOpacity();
+
+            // Update on scroll
+            window.addEventListener('scroll', updateBackgroundOpacity);
         });
     </script>
 
