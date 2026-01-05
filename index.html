@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-snap-type: y mandatory;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,7 +65,7 @@
     </div>
 
     <!-- Mission Control Center -->
-    <section class="relative min-h-screen overflow-hidden flex flex-col justify-start">
+    <section id="hero" class="relative min-h-screen overflow-hidden flex flex-col justify-start" style="scroll-snap-align: start; height: 100vh;">
         <div class="container mx-auto px-6 flex-grow" style="padding-top: 80px;">
             <div class="max-w-6xl mx-auto">
                 <!-- Mission Briefing -->
@@ -74,10 +74,7 @@
                         <span class="text-safety-orange">Mission:</span> Safe Curtain Removal
                     </h2>
                     <p class="text-lg text-gray-200 max-w-3xl mx-auto mb-6">
-                        Objective: Zero Mishap removal through professional-grade risk assessment.
-                    </p>
-                    <p class="text-sm text-gray-300 font-semibold">
-                        Guided by an OSHA 511/521 Certified leader with a Summa Cum Laude B.S. in Occupational Safety & Health.
+                        Objective: Zero Mishap removal through professional-grade risk assessment. Guided by an OSHA 511/521 Certified leader with a Summa Cum Laude B.S. in Occupational Safety & Health.
                     </p>
                 </div>
 
@@ -142,14 +139,14 @@
     </section>
 
     <!-- 30-Second Home Safety Audit -->
-    <section class="full-screen-section audit-section flex items-center">
+    <section id="audit" class="full-screen-section audit-section flex items-center" style="scroll-snap-align: start; height: 100vh;">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center fade-slide-up">
                 <h2 class="text-4xl font-bold text-white mb-4">30-Second Home Safety Audit</h2>
                 <p class="text-xl text-gray-300 mb-8">Answer 3 quick questions to assess your curtain removal risk level <span class="loading-data text-safety-orange font-semibold">Loading Data</span></p>
 
                 <!-- Audit Card -->
-                <div class="bg-black bg-opacity-20 backdrop-blur-md rounded-xl p-8 border border-white border-opacity-20" style="background: rgba(0, 0, 0, 0.75);">
+                <div class="rounded-xl p-8 border border-white border-opacity-20" style="background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(10px);">
                     <!-- Progress Indicator -->
                     <div class="flex justify-center mb-8">
                         <div class="flex space-x-2">
@@ -228,7 +225,7 @@
     </section>
 
     <!-- Hidden Hazards Section -->
-    <section class="full-screen-section hazards-section flex items-center">
+    <section id="lead-hazard" class="full-screen-section hazards-section flex items-center" style="scroll-snap-align: start; height: 100vh;">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center fade-slide-up">
                 <h2 class="text-4xl font-bold text-white mb-6">Hidden Hazards: Lead-Based Paint Protocol</h2>
@@ -892,7 +889,7 @@
 
 
     <!-- Professional Route Section -->
-    <section class="full-screen-section pro-route-section flex items-center">
+    <section id="pro-route" class="full-screen-section pro-route-section flex items-center" style="scroll-snap-align: start; height: 100vh;">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center fade-slide-up">
                 <h2 class="text-4xl font-bold text-white mb-6">Professional Route: High-Clearance Removal</h2>
